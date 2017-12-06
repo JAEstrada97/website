@@ -32,6 +32,10 @@
     <div class="centered plot">
       <span id="plot"></span>
     </div>
+    
+    <div class="centered plot">
+      <span><strong>Actors: </strong></span><span id="actors"></span>
+      </div>
 
     <div class="poster-image">
       <img class="centered" id="poster"></img>
@@ -52,6 +56,7 @@
         $("#title").html(response.Title)
         $("#poster").attr("src",response.Poster);
         $("#plot").html(response.Plot);
+         $("#actors").html(response.Actors);
         console.log(response);
       }
     })
