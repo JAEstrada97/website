@@ -1,0 +1,100 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  background-color: lightgrey;
+  color: #111;
+}
+
+.centered {
+  margin: auto;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+}
+
+.plot {
+  width: 50%;
+}
+
+.poster-image {
+  width: 50%;
+  display:block;
+  margin:auto;
+  margin-bottom: 20px;
+}
+
+.padding-on-bottom {
+  height: 40px;
+}
+
+#footer {
+  height: 40px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: gainsboro;
+  margin-top: 50px;
+}
+
+.welcome-paragraph {
+  text-align: justify;
+  font-size: 1.1em;
+  width: 40%;
+  margin-bottom: 50px;
+}
+
+.welcome-header {
+  text-align: center;
+  font-size: 2em;
+}
+
+.content-header {
+  background-color: #444;
+}
+
+.content {
+  text-align: center;
+  margin: auto;
+  padding: 10px;
+  margin-bottom: 30px;
+}
+
+
+.price-info {
+  font-size: 2em;
+}
+
+img {
+  width: 100%;
+}
+
+.my-places {
+  margin-bottom: 50px;
+}
+
+.place {
+  font-size: 1.7em;
+}
+
+a {
+  color: darkorange;
+}
+
+@media only screen and (max-width: 1200px) {
+  .welcome-paragraph {
+    width: 90%;
+    margin-bottom: 10px;
+  }
+
+  .poster-image {
+    width: 90%;
+  }
+
+  .plot {
+    width: 90%;
+  }
+}

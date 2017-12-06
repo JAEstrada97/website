@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <title>Mad Max</title>
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="../css/styles.css">
+
+  <script>
+    $(function () {
+      $("#header").load("../header.html");
+      $("#footer").load("../footer.html");
+    });
+  </script>
+
+</head>
+
+<body>
+  <div id="header"></div>
+  <div class="container wrapper">
+
+    <div class="centered">
+      <h1 id="title"></h1>
+    </div>
+
+    <div class="centered plot">
+        <span id="plot"></span>
+      </div>
+
+    <div class="poster-image">
+        <img class="centered" id="poster"></img>
+    </div>
+
+    <div class="padding-on-bottom"></div>
+
+    <div id="footer" class="footer"></div>
+  </div>
+
+
+  <script src="../js/scripts.js"></script>
+  <script async>
+    $.getJSON({
+      url: "https://www.omdbapi.com/?i=tt1392190&apikey=d8cf56b5",
+      dataType: "json",
+      success: function (response) {
+        $("#title").html(response.Title)
+        $("#poster").attr("src",response.Poster);
+        $("#plot").html(response.Plot);
+        console.log(response);
+      }
+    })
+  </script>
+</body>
+
+</html>
